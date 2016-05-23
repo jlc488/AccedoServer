@@ -4,11 +4,11 @@
  */
 
 'use strict';
-import Thing from '../api/accedotv/accedotv.history.model';
+import HistoryModel from '../api/accedotv/accedotv.history.model';
 
-Thing.find({}).removeAsync()
+HistoryModel.find({}).removeAsync()
   .then(function() {
-    Thing.create({
+    HistoryModel.create({
       name: 'Development Tools',
       info: 'Integration with popular tools such as Grunt, Babel, Karma, ' +
              'Mocha, JSHint, Node Inspector, Livereload, Protractor, Jade, ' +
