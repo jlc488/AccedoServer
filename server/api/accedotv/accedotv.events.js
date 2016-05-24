@@ -20,7 +20,7 @@ var events = {
 // Register the event emitter to the model events
 for (var e in events) {
   var event = events[e];
-  Thing.schema.post(e, emitEvent(event));
+  HistoryModel.HistorySchema.post(e, emitEvent(event));
 }
 
 function emitEvent(event) {
