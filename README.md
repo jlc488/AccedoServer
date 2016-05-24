@@ -1,7 +1,5 @@
 # accedo-server
 
-This project was generated with the [Express API Generator](https://github.com/ioneyed/generator-expressjs-api) version 0.0.1.
-
 ## Getting Started
 
 ### Prerequisites

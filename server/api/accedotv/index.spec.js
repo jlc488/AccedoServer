@@ -4,18 +4,12 @@ var proxyquire = require('proxyquire').noPreserveCache();
 
 var accedotvCtrlStub = {
   index: 'accedotvCtrl.index',
-  show: 'accedotvCtrl.show',
   create: 'accedotvCtrl.create',
-  update: 'accedotvCtrl.update',
-  destroy: 'accedotvCtrl.destroy'
 };
 
 var routerStub = {
   get: sinon.spy(),
-  put: sinon.spy(),
-  patch: sinon.spy(),
   post: sinon.spy(),
-  delete: sinon.spy()
 };
 
 // require the index with our stubbed out modules
@@ -34,21 +28,11 @@ describe('History API Router:', function() {
     historyIndex.should.equal(routerStub);
   });
 
-  describe('GET /api/history', function() {
+  describe('GET /v1/history', function() {
 
     it('should route to accedotv.controller.index', function() {
       routerStub.get
         .withArgs('/', 'accedotvCtrl.index')
-        .should.have.been.calledOnce;
-    });
-
-  });
-
-  describe('GET /api/history/:id', function() {
-
-    it('should route to accedotv.controller.show', function() {
-      routerStub.get
-        .withArgs('/:id', 'accedotvCtrl.show')
         .should.have.been.calledOnce;
     });
 
@@ -63,35 +47,4 @@ describe('History API Router:', function() {
     });
 
   });
-
-  describe('PUT /api/history/:id', function() {
-
-    it('should route to accedotv.controller.update', function() {
-      routerStub.put
-        .withArgs('/:id', 'accedotvCtrl.update')
-        .should.have.been.calledOnce;
-    });
-
   });
-
-  describe('PATCH /api/history/:id', function() {
-
-    it('should route to accedotv.controller.update', function() {
-      routerStub.patch
-        .withArgs('/:id', 'accedotvCtrl.update')
-        .should.have.been.calledOnce;
-    });
-
-  });
-
-  describe('DELETE /api/history/:id', function() {
-
-    it('should route to accedotv.controller.destroy', function() {
-      routerStub.delete
-        .withArgs('/:id', 'accedotvCtrl.destroy')
-        .should.have.been.calledOnce;
-    });
-
-  });
-
-});
