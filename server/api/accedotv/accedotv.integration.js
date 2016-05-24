@@ -30,10 +30,10 @@ describe('History API:', function() {
 
   });
 
-  describe('POST /api/history', function() {
+  describe('POST /v1/history', function() {
     beforeEach(function(done) {
       request(app)
-        .post('/api/history')
+        .post('/v1/history')
         .send({
           name: 'History Tracking',
           info: 'Tracking record is done saving!!'
