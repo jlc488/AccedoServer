@@ -125,8 +125,8 @@ describe('History API:', function() {
     });
 
     it('should respond with the newly created history', function() {
-      newThing.name.should.equal('History Tracking');
-      newThing.info.should.equal('Tracking record is done saving!!');
+      newThing.title.should.equal('22 Jump Street');
+      newThing.images[0].url.should.equal('http://lorempixel.com/214/317/?t=5');
     });
 
   });

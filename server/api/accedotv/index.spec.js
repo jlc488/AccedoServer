@@ -38,7 +38,7 @@ describe('History API Router:', function() {
 
   });
 
-  describe('POST /api/history', function() {
+  describe('POST /v1/history', function() {
 
     it('should route to accedotv.controller.create', function() {
       routerStub.post
