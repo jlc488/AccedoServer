@@ -25,3 +25,14 @@ Run `grunt build` for building and `grunt serve` for preview.
 ## Testing
 
 Running `npm test` will run the unit tests with karma.
+
+## Reminder
+
+To allow the access from the outside, you have to set the ip as '0.0.0.0' from server/config/environment/index.js line No. 25 ip
+
+## Demo url
+
+http://accedotv-client.eastasia.cloudapp.azure.com:9000/v1/history GET <-- Fetch all the history data 
+
+
+http://accedotv-client.eastasia.cloudapp.azure.com:9000/v1/history POST   <-- Insert History data into history db
