@@ -329,8 +329,6 @@ module.exports = function (grunt) {
           'clean:server',
           'env:all',
           'env:test',
-          'concurrent:pre',
-          'concurrent:test',
           'express:dev',
           'protractor'
         ]);
@@ -379,12 +377,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'concurrent:pre',
-    'concurrent:dist',
-    'injector',
-    'wiredep:client',
-    'concat',
-    'copy:dist',
     'babel:server',
   ]);
 
