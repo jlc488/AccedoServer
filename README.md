@@ -32,7 +32,7 @@ To allow the access from the outside, you have to set the ip as '0.0.0.0' from s
 
 ## Demo url
 
-http://accedotv-client.eastasia.cloudapp.azure.com:9000/v1/history GET <-- Fetch all the history data 
+<del>http://accedotv-client.eastasia.cloudapp.azure.com:9000/v1/history GET <-- Fetch all the history data </del>
 
 
-http://accedotv-client.eastasia.cloudapp.azure.com:9000/v1/history POST   <-- Insert History data into history db
+<del>http://accedotv-client.eastasia.cloudapp.azure.com:9000/v1/history POST   <-- Insert History data into history db </del>
